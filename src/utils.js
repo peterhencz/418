@@ -5,12 +5,28 @@ const doA = (what, cl) => {
 };
 
 const colors = [
-  "#ef431f",
-  "#e8ae42",
-  "#7bbda1",
-  "#29a7c0",
-  "#f9cd4a",
-  "#517f97",
+  "#b2a1ce",
+  "#2a5150",
+  "#4a8b9d",
+  "#d7c7ae",
+  "#837e94",
+  "#fad763",
+  "#839b9b",
+  "#90504e",
+  "#d6856a",
+  "#a69ee9",
+  "#cbdae1",
+  "#d2d4c9",
+  "#d8d7d2",
+  "#dadde6",
+  "#dad7d2",
+  "#dad4d6",
+  "#c7a991",
+  "#d7a350",
+  "#484e2a",
+  "#c1a4a9",
+  "#a99690",
+  "#d5a448",
 ];
 
 const randomColor = () => {
