@@ -1,0 +1,32 @@
+{
+  "name": "cube",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
+    "dev": "npm run webpack-dev-server -- --mode development --hot",
+    "prod": "npm run webpack -- --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterhencz/Cube-.git"
+  },
+  "author": "Peter Hencz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterhencz/Cube-/issues"
+  },
+  "homepage": "https://github.com/peterhencz/Cube-#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "lodash": "^4.17.15",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
