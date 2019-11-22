@@ -3,3 +3,9 @@ body {
   font-size: 16px;
   color: white;
 }
+
+.square {
+  width: 3em;
+  height: 3em;
+  background-color: #f4baba;
+}
