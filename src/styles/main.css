@@ -1,11 +1,30 @@
 body {
-  background-color: #333;
+  background-color: #444444;
   font-size: 16px;
   color: white;
 }
 
 .square {
-  width: 3em;
-  height: 3em;
-  background-color: #f4baba;
+  width: 2em;
+  height: 2em;
+  background-color: #454545;
+  margin: 0.25em;
+}
+
+.squareHover {
+  animation: squareHover 8s;
+}
+
+.square-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@keyframes squareHover {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,21 +1,17 @@
-import { doA, randomColor } from "../utils";
+import { doA } from "../utils";
 
-console.log(randomColor);
 const makeSquare = () => {
-  const square = doA("div");
-  square.classList.add("square");
-  square.style.backgroundColor = randomColor();
+  const square = doA("div", "square");
 
   return square;
 };
 
 const createSquares = () => {
   let squares = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 600; i++) {
     const square = makeSquare();
     squares.push(square);
   }
-
   return squares;
 };
 
