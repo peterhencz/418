@@ -1,9 +1,11 @@
 import _ from "lodash";
+import doA from "./utils.js";
+import "./styles/main.css";
 
 function component() {
-  const element = document.createElement("div");
+  const element = doA("div");
 
-  element.innerHTML = _.join(["Hello", "YOLO"], " ");
+  element.innerHTML = _.join(["Hello", "YOO"], " ");
 
   return element;
 }
