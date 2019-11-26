@@ -3,8 +3,9 @@ body {
   font-size: 16px;
   color: white;
   margin: 0;
+  border: 4em dashed white;
   display: grid;
-  height: 100vh;
+  height: calc(100vh - 8em);
   place-items: center center;
 }
 

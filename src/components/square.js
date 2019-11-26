@@ -3,6 +3,17 @@ import { doA } from "../utils";
 const size = window.innerWidth / 20;
 console.log(size);
 
+const createSquarePage = () => {
+  const squareContainer = doA("div", "square-container");
+
+  squareContainer.style.width = `${window.innerWidth / 2}px`;
+  squareContainer.style.height = `${window.innerWidth / 2}px`;
+  squareContainer.style.overflow = "hidden";
+  const squares = createSquares();
+
+  squares.forEach(square => squareContainer.appendChild(square));
+  return squareContainer;
+};
 const makeSquare = () => {
   const square = doA("div", "square");
 
@@ -25,4 +36,4 @@ const createSquares = () => {
   return squares;
 };
 
-export { makeSquare, createSquares };
+export { makeSquare, createSquares, createSquarePage };
