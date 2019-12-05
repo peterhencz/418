@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/cursor.css":
+/*!*********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/cursor.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".circle-cursor {\\n  position: absolute;\\n  width: 30px;\\n  height: 30px;\\n  border-radius: 50%;\\n  background: white;\\n}\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/styles/cursor.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/main.css":
 /*!*******************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/main.css ***!
@@ -93,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background-color: #dfded9;\\n  font-size: 16px;\\n  color: white;\\n  margin: 0;\\n  display: grid;\\n  height: 100vh;\\n  place-items: center center;\\n}\\n\\n.square {\\n  background-color: #d4d3cd;\\n  animation-duration: 1s;\\n}\\n\\n.squareHover {\\n  background-color: #dfded9;\\n  transition-delay: 1s;\\n  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);\\n}\\n\\n.square-container {\\n  display: flex;\\n  flex-flow: row wrap;\\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.13);\\n}\\n\\n@keyframes squareHover {\\n  0% {\\n    transform: scale(1);\\n  }\\n  100% {\\n    transform: scale(1.2);\\n    background-color: #dfded9;\\n  }\\n}\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/styles/main.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background-color: #dfded9;\\n  font-size: 16px;\\n  color: white;\\n  margin: 0;\\n  border: 4em dashed white;\\n  display: grid;\\n  height: calc(100vh - 8em);\\n  place-items: center center;\\n  cursor: none;\\n}\\n\\n.square {\\n  background-color: #d4d3cd;\\n  animation-duration: 1s;\\n}\\n\\n.squareHover {\\n  background-color: #dfded9;\\n  transition-delay: 1s;\\n  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);\\n}\\n\\n.square-container {\\n  display: flex;\\n  flex-flow: row wrap;\\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.13);\\n}\\n\\n@keyframes squareHover {\\n  0% {\\n    transform: scale(1);\\n  }\\n  100% {\\n    transform: scale(1.2);\\n    background-color: #dfded9;\\n  }\\n}\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/styles/main.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -154,27 +165,27 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
+/***/ "./src/components/cursor.js":
+/*!**********************************!*\
+  !*** ./src/components/cursor.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ \"./src/utils.js\");\n/* harmony import */ var _styles_cursor_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/cursor.css */ \"./src/styles/cursor.css\");\n/* harmony import */ var _styles_cursor_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_cursor_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nconst body = document.body;\n\nconst cursor = () => {\n  const circleCursor = Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"doA\"])(\"div\");\n  circleCursor.classList.add(\"circle-cursor\");\n  document.addEventListener(\"mousemove\", e => {\n    const pageX = e.pageX;\n    const pageY = e.pageY;\n    circleCursor.style.top = `${pageY - 15}px`;\n    circleCursor.style.left = `${pageX - 15}px`;\n  });\n  body.appendChild(circleCursor);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (cursor);\n\n\n//# sourceURL=webpack:///./src/components/cursor.js?");
+
+/***/ }),
+
 /***/ "./src/components/square.js":
 /*!**********************************!*\
   !*** ./src/components/square.js ***!
   \**********************************/
-/*! exports provided: makeSquare, createSquares */
+/*! exports provided: makeSquare, createSquares, createSquarePage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"makeSquare\", function() { return makeSquare; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createSquares\", function() { return createSquares; });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ \"./src/utils.js\");\n\n\nconst size = window.innerWidth / 20;\nconsole.log(size);\n\nconst makeSquare = () => {\n  const square = Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"doA\"])(\"div\", \"square\");\n\n  square.style.width = `${size}px`;\n  square.style.height = `${size}px`;\n  // square.style.borderRadius = `${Math.floor(Math.random() * 50) +\n  //   50}px ${Math.floor(Math.random() * 50) + 50}px ${Math.floor(\n  //   Math.random() * 50\n  // ) + 50}px ${Math.floor(Math.random() * 50) + 50}px `;\n\n  return square;\n};\n\nconst createSquares = () => {\n  let squares = [];\n  for (let i = 0; i <= 1000; i++) {\n    const square = makeSquare();\n    squares.push(square);\n  }\n  return squares;\n};\n\n\n\n\n//# sourceURL=webpack:///./src/components/square.js?");
-
-/***/ }),
-
-/***/ "./src/components/squarePage.js":
-/*!**************************************!*\
-  !*** ./src/components/squarePage.js ***!
-  \**************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ \"./src/utils.js\");\n/* harmony import */ var _square_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./square.js */ \"./src/components/square.js\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/main.css */ \"./src/styles/main.css\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_main_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nfunction squarePage() {\n  const element = Object(_utils__WEBPACK_IMPORTED_MODULE_1__[\"doA\"])(\"div\");\n  const squareContainer = Object(_utils__WEBPACK_IMPORTED_MODULE_1__[\"doA\"])(\"div\", \"square-container\");\n\n  squareContainer.style.width = `${window.innerWidth / 2}px`;\n  squareContainer.style.height = `${window.innerWidth / 2}px`;\n  squareContainer.style.overflow = \"hidden\";\n  const squares = Object(_square_js__WEBPACK_IMPORTED_MODULE_2__[\"createSquares\"])();\n\n  squares.forEach(square => squareContainer.appendChild(square));\n  element.appendChild(squareContainer);\n  return element;\n}\n\ndocument.body.appendChild(squarePage());\n\nconst squareHover = document.querySelectorAll(\".square\");\nfor (let i = 0; i < squareHover.length; i++) {\n  squareHover[i].addEventListener(\"mouseenter\", function() {\n    squareHover[i].classList.remove(\"square\");\n    squareHover[i].style.backgroundColor = Object(_utils__WEBPACK_IMPORTED_MODULE_1__[\"randomColor\"])();\n    squareHover[i].style.animation = \"squareHover\";\n  });\n  console.log(Object(_utils__WEBPACK_IMPORTED_MODULE_1__[\"randomColor\"])());\n  squareHover[i].addEventListener(\"click\", function() {});\n}\n\n\n//# sourceURL=webpack:///./src/components/squarePage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"makeSquare\", function() { return makeSquare; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createSquares\", function() { return createSquares; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createSquarePage\", function() { return createSquarePage; });\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ \"./src/utils.js\");\n\n\nconst size = window.innerWidth / 20;\nconsole.log(size);\n\nconst createSquarePage = () => {\n  const squareContainer = Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"doA\"])(\"div\", \"square-container\");\n\n  squareContainer.style.width = `${window.innerWidth / 2}px`;\n  squareContainer.style.height = `${window.innerWidth / 2}px`;\n  squareContainer.style.overflow = \"hidden\";\n  const squares = createSquares();\n\n  squares.forEach(square => squareContainer.appendChild(square));\n  return squareContainer;\n};\nconst makeSquare = () => {\n  const square = Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"doA\"])(\"div\", \"square\");\n\n  square.style.width = `${size}px`;\n  square.style.height = `${size}px`;\n  // square.style.borderRadius = `${Math.floor(Math.random() * 50) +\n  //   50}px ${Math.floor(Math.random() * 50) + 50}px ${Math.floor(\n  //   Math.random() * 50\n  // ) + 50}px ${Math.floor(Math.random() * 50) + 50}px `;\n\n  return square;\n};\n\nconst createSquares = () => {\n  let squares = [];\n  for (let i = 0; i <= 1000; i++) {\n    const square = makeSquare();\n    squares.push(square);\n  }\n  return squares;\n};\n\n\n\n\n//# sourceURL=webpack:///./src/components/square.js?");
 
 /***/ }),
 
@@ -186,7 +197,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var loda
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.js */ \"./src/utils.js\");\n/* harmony import */ var _components_squarePage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/squarePage.js */ \"./src/components/squarePage.js\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_main_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nfunction component() {\n  console.log(\"kiscica\");\n}\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils.js */ \"./src/utils.js\");\n/* harmony import */ var _components_square_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/square.js */ \"./src/components/square.js\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_main_css__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _components_cursor_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/cursor.js */ \"./src/components/cursor.js\");\n\n\n\n\n\n\nfunction component() {\n  const element = Object(_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"doA\"])(\"div\");\n  console.log(\"kiscica\");\n\n  element.appendChild(Object(_components_square_js__WEBPACK_IMPORTED_MODULE_2__[\"createSquarePage\"])());\n  return element;\n}\n\ndocument.body.onload = Object(_components_cursor_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\ndocument.body.appendChild(component());\n\nconst squareHover = document.querySelectorAll(\".square\");\nfor (let i = 0; i < squareHover.length; i++) {\n  squareHover[i].addEventListener(\"mouseenter\", function() {\n    squareHover[i].classList.remove(\"square\");\n    squareHover[i].style.backgroundColor = Object(_utils_js__WEBPACK_IMPORTED_MODULE_1__[\"randomColor\"])();\n    squareHover[i].style.animation = \"squareHover\";\n  });\n\n  squareHover[i].addEventListener(\"click\", function() {});\n}\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/styles/cursor.css":
+/*!*******************************!*\
+  !*** ./src/styles/cursor.css ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./cursor.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/cursor.css\");\n\nif (typeof content === 'string') {\n  content = [[module.i, content, '']];\n}\n\nvar options = {}\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\")(content, options);\n\nif (content.locals) {\n  module.exports = content.locals;\n}\n\n\n//# sourceURL=webpack:///./src/styles/cursor.css?");
 
 /***/ }),
 

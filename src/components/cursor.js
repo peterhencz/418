@@ -3,19 +3,16 @@ import "../styles/cursor.css";
 
 const body = document.body;
 
-const cursor = e => {
-  e = e || window.event;
+const cursor = () => {
   const circleCursor = doA("div");
   circleCursor.classList.add("circle-cursor");
-
-  const pageX = e.pageX;
-  const pageY = e.pageY;
-
-  console.log("cursor");
-  console.log(e.pageX);
+  document.addEventListener("mousemove", e => {
+    const pageX = e.pageX;
+    const pageY = e.pageY;
+    circleCursor.style.top = `${pageY - 15}px`;
+    circleCursor.style.left = `${pageX - 15}px`;
+  });
   body.appendChild(circleCursor);
 };
-
-body.addEventListener("mousemove", cursor);
 
 export default cursor;
