@@ -1,14 +1,14 @@
 import _ from "lodash";
-import { doA, randomColor } from "../utils";
+import { doSomething, randomColor } from "../utils";
 import { createSquares } from "./square.js";
 import "../styles/main.css";
 
 function squarePage() {
-  const element = doA("div");
-  const squareContainer = doA("div", "square-container");
+  const element = doSomething("div", "page");
+  const squareContainer = doSomething("div", "square-container");
 
   squareContainer.style.width = `${window.innerWidth / 2}px`;
-  squareContainer.style.height = `${window.innerWidth / 2}px`;
+  squareContainer.style.height = `${window.innerHeight / 2}px`;
   squareContainer.style.overflow = "hidden";
   const squares = createSquares();
 
@@ -30,3 +30,5 @@ function squareService() {
     squareHover[i].addEventListener("click", function() {});
   }
 }
+
+export { squarePage, squareService };

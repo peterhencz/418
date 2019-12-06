@@ -1,10 +1,10 @@
-import { doA } from "../utils";
+import { doSomething } from "../utils";
 
 const size = window.innerWidth / 20;
 console.log(size);
 
 const createSquarePage = () => {
-  const squareContainer = doA("div", "square-container");
+  const squareContainer = doSomething("div", "square-container");
 
   squareContainer.style.width = `${window.innerWidth / 2}px`;
   squareContainer.style.height = `${window.innerWidth / 2}px`;
@@ -15,7 +15,7 @@ const createSquarePage = () => {
   return squareContainer;
 };
 const makeSquare = () => {
-  const square = doA("div", "square");
+  const square = doSomething("div", "square");
 
   square.style.width = `${size}px`;
   square.style.height = `${size}px`;

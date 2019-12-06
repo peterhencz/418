@@ -1,4 +1,4 @@
-const doA = (what, cl) => {
+const doSomething = (what, cl) => {
   const element = document.createElement(what);
   element.classList.add(`${cl}`);
   return element;
@@ -34,4 +34,8 @@ const randomColor = () => {
   return color;
 };
 
-export { doA, randomColor };
+const createPage = () => {
+  console.log("createpage");
+};
+
+export { doSomething, randomColor, createPage };

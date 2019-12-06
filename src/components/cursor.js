@@ -1,16 +1,24 @@
-import { doA } from "../utils";
+import { doSomething } from "../utils";
 import "../styles/cursor.css";
 
 const body = document.body;
 
 const cursor = () => {
-  const circleCursor = doA("div");
-  circleCursor.classList.add("circle-cursor");
-  document.addEventListener("mousemove", e => {
+  const circleCursor = doSomething("div", "circle-cursor");
+
+  document.body.addEventListener("mousemove", e => {
     const pageX = e.pageX;
     const pageY = e.pageY;
-    circleCursor.style.top = `${pageY - 15}px`;
-    circleCursor.style.left = `${pageX - 15}px`;
+    circleCursor.style.top = `${pageY - 10}px`;
+    circleCursor.style.left = `${pageX - 10}px`;
+  });
+
+  document.addEventListener("mousedown", () => {
+    circleCursor.classList.add("cursor-down");
+  });
+
+  document.addEventListener("mouseup", () => {
+    circleCursor.classList.remove("cursor-down");
   });
   body.appendChild(circleCursor);
 };

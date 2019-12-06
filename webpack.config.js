@@ -13,6 +13,10 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+        use: ["file-loader"],
+      },
     ],
   },
   output: {

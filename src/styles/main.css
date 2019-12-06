@@ -1,12 +1,20 @@
+@font-face {
+  font-family: "League Spartan";
+  src: url("../../assets/leaguespartan-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
+  font-family: "League Spartan";
   background-color: #dfded9;
   font-size: 16px;
   color: white;
   margin: 0;
   display: grid;
-  height: calc(100vh - 8em);
+  height: 100vh;
   place-items: center center;
-  cursor: none;
+  /* cursor: none; */
 }
 
 .square {
@@ -26,6 +34,11 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.13);
 }
 
+.link {
+  width: 150px;
+  height: 32px;
+  border: 1px solid #333;
+}
 @keyframes squareHover {
   0% {
     transform: scale(1);

@@ -1,7 +1,18 @@
 .circle-cursor {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: white;
+  opacity: 0.8;
+  transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.cursor-down {
+  opacity: 1;
+  transform: scale(0.7);
+}
+
+.cursor-up {
+  transform: scale(1);
 }
