@@ -16,7 +16,7 @@ function app() {
 
   element.appendChild(link1);
 
-  createMenu();
+  console.log("crM: ", createMenu());
 
   return element;
 }

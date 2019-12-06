@@ -7,18 +7,19 @@ const routes = {
 
 const createMenu = () => {
   console.table(routes);
+
   const links = Object.entries(routes);
+
   console.table(links);
-  links.forEach(link => {
-    let key = link[0];
-    let value = link[1];
-    console.log(key);
-    console.log(value);
-    const cica = doSomething("div", "link");
-    cica.innerHTML = key;
-    document.body.appendChild(cica);
-    // console.log(cica);
+
+  const menu = links.map(object => {
+    let key = object[0];
+    let value = object[1];
+    console.log(key, value);
+    let link = document.createElement("div");
+    link.classList.add(value, "link");
   });
+  return menu;
 };
 
 export default createMenu;
