@@ -19,6 +19,7 @@ const makeSquare = () => {
 
   square.style.width = `${size}px`;
   square.style.height = `${size}px`;
+
   // square.style.borderRadius = `${Math.floor(Math.random() * 50) +
   //   50}px ${Math.floor(Math.random() * 50) + 50}px ${Math.floor(
   //   Math.random() * 50

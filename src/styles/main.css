@@ -1,20 +1,35 @@
 @font-face {
   font-family: "League Spartan";
   src: url("../../assets/leaguespartan-bold.ttf") format("truetype");
-  font-weight: bold;
+  /* font-weight: bold; */
   font-style: normal;
 }
 
 body {
   font-family: "League Spartan";
-  background-color: #dfded9;
+  background-color: #f5f4f0;
   font-size: 16px;
-  color: white;
+  color: #373536;
   margin: 0;
   display: grid;
   height: 100vh;
   place-items: center center;
-  /* cursor: none; */
+  cursor: none;
+}
+
+.logo-418 {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  font-size: 10em;
+  padding: 2rem;
+  transition: ease-out 0.2s;
+}
+
+.logo-418:hover {
+  background: #ed5144;
+  border-radius: 0 0 4px 0;
+  color: #f5f4f0;
 }
 
 .square {
@@ -35,10 +50,15 @@ body {
 }
 
 .link {
-  width: 150px;
-  height: 32px;
-  border: 1px solid #333;
 }
+
+.link:hover {
+  color: #60c3ae;
+}
+.link:active {
+  transform: scale(1.1);
+}
+
 @keyframes squareHover {
   0% {
     transform: scale(1);

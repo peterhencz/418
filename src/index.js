@@ -4,7 +4,7 @@ import { createSquares, createSquarePage } from "./components/square.js";
 import "./styles/main.css";
 import cursor from "./components/cursor.js";
 
-function component() {
+function app() {
   const element = doSomething("div", "main");
   console.log("kiscica");
 
@@ -14,19 +14,16 @@ function component() {
 
   element.appendChild(link1);
 
-  // link1.appendChild(createSquarePage());
-
   return link1;
 }
 
 document.body.onload = cursor();
-document.body.appendChild(component());
+document.body.appendChild(app());
 
-const cica = document.querySelector(".link");
-console.log(cica);
-cica.onclick = function() {
+const link = document.querySelector(".link");
+link.addEventListener("click", () => {
   console.log("yolo");
-};
+});
 
 // const squareHover = document.querySelectorAll(".square");
 // for (let i = 0; i < squareHover.length; i++) {
