@@ -1,9 +1,9 @@
 import _ from "lodash";
 import { doSomething, randomColor, createPage } from "./utils.js";
 import { createSquares, createSquarePage } from "./components/square.js";
-import "./styles/main.css";
 import cursor from "./components/cursor.js";
 
+import "./styles/index.scss";
 function app() {
   const element = doSomething("div", "main");
   console.log("kiscica");

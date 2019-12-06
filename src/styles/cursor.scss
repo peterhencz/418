@@ -3,7 +3,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ed5144;
+  background: $orange;
   opacity: 0.8;
   transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   pointer-events: none;
@@ -12,7 +12,7 @@
 
 .cursor-down {
   opacity: 1;
-  background: #372a86;
+  background: $purple;
   transform: scale(0.7);
 }
 

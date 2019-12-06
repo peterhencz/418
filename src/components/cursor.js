@@ -1,5 +1,4 @@
 import { doSomething } from "../utils";
-import "../styles/cursor.css";
 
 const body = document.body;
 

@@ -7,9 +7,9 @@
 
 body {
   font-family: "League Spartan";
-  background-color: #f5f4f0;
+  background-color: $paper;
   font-size: 16px;
-  color: #373536;
+  color: $grey-ink;
   margin: 0;
   display: grid;
   height: 100vh;
@@ -27,18 +27,18 @@ body {
 }
 
 .logo-418:hover {
-  background: #ed5144;
+  background: $orange;
   border-radius: 0 0 4px 0;
-  color: #f5f4f0;
+  color: $paper;
 }
 
 .square {
-  background-color: #d4d3cd;
+  background-color: $paper;
   animation-duration: 1s;
 }
 
 .squareHover {
-  background-color: #dfded9;
+  background-color: $paper;
   transition-delay: 1s;
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -53,7 +53,7 @@ body {
 }
 
 .link:hover {
-  color: #60c3ae;
+  color: $green;
 }
 .link:active {
   transform: scale(1.1);
@@ -65,6 +65,6 @@ body {
   }
   100% {
     transform: scale(1.2);
-    background-color: #dfded9;
+    background-color: $paper;
   }
 }

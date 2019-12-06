@@ -17,6 +17,10 @@ module.exports = {
         test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
         use: ["file-loader"],
       },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
   output: {
