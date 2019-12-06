@@ -3,6 +3,7 @@
 project hub
 
 ```
+npm i
 npm run dev
 ```
 
