@@ -34,8 +34,12 @@ const randomColor = () => {
   return color;
 };
 
-const createPage = () => {
-  console.log("createpage");
+const createPage = wrapperClass => {
+  document.body.innerHTML = "";
+  const wrapper = doSomething("div", `${wrapperClass}`);
+  document.body.appendChild(wrapper);
+  console.log(`hello ${wrapperClass}`);
+  wrapper.innerHTML = `hello ${wrapperClass}`;
 };
 
 export { doSomething, randomColor, createPage };

@@ -22,7 +22,7 @@ document.body.appendChild(app());
 
 const link = document.querySelector(".link");
 link.addEventListener("click", () => {
-  console.log("yolo");
+  createPage("<3");
 });
 
 // const squareHover = document.querySelectorAll(".square");
