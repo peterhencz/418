@@ -1,11 +1,13 @@
 import _ from "lodash";
 import { doSomething, randomColor, createPage } from "./utils.js";
-import { createSquares, createSquarePage } from "./components/square.js";
+import createMenu from "./router.js";
 import cursor from "./components/cursor.js";
 
 import "./styles/index.scss";
+
 function app() {
   const element = doSomething("div", "main");
+
   console.log("kiscica");
 
   const link1 = doSomething("div", "link");
@@ -14,7 +16,9 @@ function app() {
 
   element.appendChild(link1);
 
-  return link1;
+  createMenu();
+
+  return element;
 }
 
 document.body.onload = cursor();

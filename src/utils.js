@@ -4,7 +4,7 @@ const doSomething = (what, cl) => {
   return element;
 };
 
-const colors = [
+const squareColors = [
   "#b2a1ce",
   "#2a5150",
   "#4a8b9d",
@@ -30,14 +30,15 @@ const colors = [
 ];
 
 const randomColor = () => {
-  const color = colors[Math.floor(Math.random() * colors.length)];
+  const color = squareColors[Math.floor(Math.random() * squareColors.length)];
   return color;
 };
 
 const createPage = wrapperClass => {
-  document.body.innerHTML = "";
+  const main = document.querySelector(".main");
+  main.innerHTML = "";
   const wrapper = doSomething("div", `${wrapperClass}`);
-  document.body.appendChild(wrapper);
+  main.appendChild(wrapper);
   console.log(`hello ${wrapperClass}`);
   wrapper.innerHTML = `hello ${wrapperClass}`;
 };
